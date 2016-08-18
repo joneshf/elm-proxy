@@ -79,7 +79,7 @@ view model =
 
 viewUser : Permissions -> Html msg
 viewUser permissions =
-  case persmissions of
+  case permissions of
     User ->
       text "Welcome friend!"
 
@@ -88,7 +88,7 @@ viewUser permissions =
 
 viewModerator : Permissions -> Html Msg
 viewModerator permissions =
-  case persmissions of
+  case permissions of
     Moderator ->
       button [ onClick Warn ]
         [ text "Warn all users" ]
@@ -97,7 +97,7 @@ viewModerator permissions =
 
 viewAdministrator : Permissions -> Html Msg
 viewAdministrator permissions =
-  case persmissions of
+  case permissions of
     Administrator ->
       button [ onClick Delete ]
         [ text "Delete all users" ]
